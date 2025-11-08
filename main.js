@@ -10,6 +10,7 @@ const camera = new THREE.PerspectiveCamera(75, setSize.width / window.height, 0.
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 function onWindowResize() {
